@@ -11,10 +11,6 @@ public class Sports extends ProfileData {
     private String teamName;
     private String sportType;
 
-
-
-
-
     public Sports(String gradeLevel,
                   String state,
                   String city,
