@@ -1,11 +1,10 @@
 package com.example.demo.editStudentProfile.student;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.example.demo.editStudentProfile.academics.Academics;
 
 import java.time.LocalDate;
 
-public class Student {
+public class Student extends Academics{
     private Long id;
     private String name;
     private String email;
@@ -15,18 +14,27 @@ public class Student {
     public Student() {
     }
 
-    public Student(Long id,
+    public Student(String gradeLevel,
+                   String state,
+                   String city,
+                   String schoolName,
+                   LocalDate startDate,
+                   LocalDate endDate,
+                   double gpa,
+                   Long id,
                    String name,
                    String email,
                    LocalDate dob,
                    Integer age) {
+        super(gradeLevel, state, city, schoolName, startDate, endDate, gpa);
         this.id = id;
         this.name = name;
         this.email = email;
         this.dob = dob;
         this.age = age;
     }
-    //database will generate the id for us
+
+    //database will generate the id for this constructor
 //    public Student(String name,
 //                   String email,
 //                   LocalDate dob,

@@ -1,9 +1,7 @@
 package com.example.demo.editStudentProfile.student;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
@@ -21,4 +19,9 @@ public class StudentController {
     public List<Student> getStudents(){
         return studentService.getStudents();
     }
+
+//    @RequestMapping(method = RequestMethod.POST, path = "api/v1/student")
+//    public void addStudent(@RequestBody Student student){
+//        StudentService.getStudents();
+//    }
 }

@@ -1,12 +1,20 @@
 package com.example.demo.editStudentProfile.academics;
 import com.example.demo.editStudentProfile.profileData.ProfileData;
 
-public  class Academics extends ProfileData {
+import java.time.LocalDate;
 
-    public Academics(String gradeLevel, String state, String city,
-                     String schoolName, String startDate,
-                     String endDate, double gpa) {
-        super(gradeLevel, state, city, schoolName, startDate, endDate, (int) gpa);
+public  class Academics extends ProfileData {
+    private String schoolName;
+
+    public Academics(String gradeLevel,
+                     String state,
+                     String city,
+                     String schoolName,
+                     LocalDate startDate,
+                     LocalDate endDate,
+                     double gpa) {
+        super(gradeLevel, state, city, startDate, endDate, gpa);
+        this.schoolName = schoolName;
     }
 
     public Academics() {

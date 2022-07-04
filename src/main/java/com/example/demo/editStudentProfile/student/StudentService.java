@@ -18,14 +18,33 @@ import java.util.List;
 @Service //tells the controller that this object can be instantiated
 public class StudentService {
     @GetMapping
-    public List<Student> getStudents(){
+    public static List<Student> getStudents(){
         return List.of(new Student(
-                        1L,
-                        "Bob",
-                        "Bob101@gmail.com",
-                        LocalDate.of(2000, Month.SEPTEMBER, 21),
-                        21
-                )
+                "Senior",
+                "Washington",
+                "Seattle",
+                "University of Washington Bothell",
+                LocalDate.of(2020, Month.SEPTEMBER, 20),
+                LocalDate.of(2024, Month.JUNE, 20),
+                4.0,
+                1234L,
+                "John Doe",
+                "john.doe@gmail.com",
+                LocalDate.of(2000, Month.JUNE, 30),
+                22),
+                new Student(
+                "Freshmen",
+                "Washington",
+                "Seattle",
+                "University of Washington Bothell",
+                LocalDate.of(2020, Month.SEPTEMBER, 20),
+                LocalDate.of(2024, Month.JUNE, 20),
+                3.7,
+                1234L,
+                "Mike Tyson",
+                "mike.tyson@gmail.com",
+                LocalDate.of(1997, Month.SEPTEMBER, 30),
+                24)
         );
     }
 }

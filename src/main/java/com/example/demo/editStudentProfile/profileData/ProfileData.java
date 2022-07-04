@@ -1,14 +1,16 @@
 package com.example.demo.editStudentProfile.profileData;
 
 import com.example.demo.editStudentProfile.EditProfile;
+import jdk.jshell.execution.LoaderDelegate;
+
+import java.time.LocalDate;
 
 public class ProfileData implements EditProfile{
     private String gradeLevel;
     private String state;
     private String city;
-    //can use LocalDate instead
-    private String startDate;
-    private String endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private double gpa;
 
     /***
@@ -22,8 +24,8 @@ public class ProfileData implements EditProfile{
      */
     public ProfileData(String gradeLevel, String state,
                        String city,
-                       String startDate, String endDate,
-                       String date, double gpa) {
+                       LocalDate startDate, LocalDate endDate,
+                       double gpa) {
         this.gradeLevel = gradeLevel;
         this.state = state;
         this.city = city;
@@ -62,19 +64,19 @@ public class ProfileData implements EditProfile{
 
 
 
-    public String getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public String getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 

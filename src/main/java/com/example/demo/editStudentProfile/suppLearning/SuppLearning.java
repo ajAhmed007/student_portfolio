@@ -2,33 +2,30 @@ package com.example.demo.editStudentProfile.suppLearning;
 
 import com.example.demo.editStudentProfile.profileData.ProfileData;
 
+import java.time.LocalDate;
+
 public class SuppLearning extends ProfileData {
     private String programName;
     private String organization;
     private String awards_achievements;
 
-    /***
-     * @param gradeLevel student's current education level
-     * @param state state where education took place
-     * @param city city where education tool place
-     * @param startDate when student started going there
-     * @param endDate graduation date
-     * @param gpa grade recieved
-     */
+
     public SuppLearning(String gradeLevel,
                         String state,
                         String city,
-                        String startDate,
-                        String endDate,
+                        LocalDate startDate,
+                        LocalDate endDate,
                         double gpa,
                         String programName,
                         String organization,
                         String awards_achievements) {
-        super(gradeLevel, state, city, startDate, endDate, endDate, gpa);
+        super(gradeLevel, state, city, startDate, endDate, gpa);
         this.programName = programName;
         this.organization = organization;
         this.awards_achievements = awards_achievements;
     }
+
+
 
     public String getProgramName() {
         return programName;
