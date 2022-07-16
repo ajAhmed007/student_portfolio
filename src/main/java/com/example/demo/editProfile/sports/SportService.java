@@ -12,28 +12,16 @@ public class SportService {
     public static List<Sports> getSports(){
         List<String> sports = new ArrayList<>();
         return List.of(new Sports(
-                "Junior",
-                "Washington",
-                "Seattle",
-                LocalDate.of(2020, Month.SEPTEMBER, 17),
-                LocalDate.of(2023, Month.JUNE, 20),
-                3.5,
-                "Roosevelt High School",
-                "Varsity Basketball",
-                "Warriors",
+                1234L,
+                "Ron",
+                "William",
+                "ron.william@gmail.com",
+                LocalDate.of(2002, Month.JUNE, 1),
+                20,
+                "Washington High School",
+                "Boys Basketball",
+                "Panthers",
                 "Basketball"
-                ),
-                new Sports(
-                        "Senior",
-                        "Washington",
-                        "Seattle",
-                        LocalDate.of(2020, Month.SEPTEMBER, 17),
-                        LocalDate.of(2023, Month.JUNE, 20),
-                        3.5,
-                        "Ballard High School",
-                        "Varsity Soccer",
-                        "Beavers",
-                        "Soccer"
                 )
         );
     }

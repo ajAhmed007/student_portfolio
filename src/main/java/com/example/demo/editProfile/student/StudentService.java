@@ -1,8 +1,10 @@
 package com.example.demo.editProfile.student;
 
+import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
@@ -20,28 +22,15 @@ public class StudentService {
     @GetMapping
     public static List<Student> getStudents(){
         return List.of(new Student(
-                "Senior",
-                "Washington",
-                "Seattle",
-                "University of Washington Bothell",
-                LocalDate.of(2020, Month.SEPTEMBER, 20),
-                LocalDate.of(2024, Month.JUNE, 20),
-                4.0,
                 1234L,
-                "John Doe",
-                "john.doe@gmail.com",
-                LocalDate.of(2000, Month.JUNE, 30),
-                22)
+                "Ahmed",
+                "Abdullahi",
+                "ahmed.abdullahi@gmail.com",
+                LocalDate.of(2000, Month.JULY, 1),
+                22
+                )
         );
     }
 
-
-    public void addNewStudent(Student student) {
-        student.getAge();
-        student.getDob();
-        student.getEmail();
-
-        System.out.println(student);
-
-    }
+    public void addNewStudent(Student student) {}
 }

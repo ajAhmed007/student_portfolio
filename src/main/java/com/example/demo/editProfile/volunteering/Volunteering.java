@@ -1,26 +1,35 @@
 package com.example.demo.editProfile.volunteering;
-
-import com.example.demo.editProfile.profileData.ProfileData;
+import com.example.demo.editProfile.EditProfile;
+import com.example.demo.editProfile.student.Student;
 
 import java.time.LocalDate;
 
-public class Volunteering extends ProfileData {
-    String organization;
-    int hours;
-    String description;
+public class Volunteering extends Student{
+    private String programName;
+    private String organization;
+    private Integer hours;
 
-    public Volunteering(String gradeLevel,
-                        String state,
-                        String city,
-                        LocalDate startDate,
-                        LocalDate endDate,
+    public Volunteering(Long id,
+                        String firstName,
+                        String lastName,
+                        String email,
+                        LocalDate dob,
+                        Integer age,
+                        String programName,
                         String organization,
-                        int hours,
-                        String description) {
-        super(gradeLevel, state, city, startDate, endDate);
+                        Integer hours) {
+        super(id, firstName, lastName, email, dob, age);
+        this.programName = programName;
         this.organization = organization;
         this.hours = hours;
-        this.description = description;
+    }
+
+    public String getProgramName() {
+        return programName;
+    }
+
+    public void setProgramName(String programName) {
+        this.programName = programName;
     }
 
     public String getOrganization() {
@@ -31,28 +40,20 @@ public class Volunteering extends ProfileData {
         this.organization = organization;
     }
 
-    public int getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(int hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     @Override
     public String toString() {
         return "Volunteering{" +
-                "organization='" + organization + '\'' +
+                "programName='" + programName + '\'' +
+                ", organization='" + organization + '\'' +
                 ", hours=" + hours +
-                ", description='" + description + '\'' +
                 '}';
     }
 }

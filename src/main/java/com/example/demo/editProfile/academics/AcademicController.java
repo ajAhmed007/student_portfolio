@@ -16,14 +16,16 @@ public class AcademicController {
         this.academicService = academicService;
     }
 
-    @GetMapping
+    @GetMapping("/records")
     public List<Academics> getAcademic(){
         return AcademicService.getAcademics();
     }
 
-    @PostMapping("/addAcademics")
-    public void addNewAcademics(@RequestBody Academics academics){
-        academicService.addNewStudent(academics);
+    @PostMapping
+    public void addAcademics(@RequestBody Academics academics){
+        academicService.addAcademics(academics);
     }
+
+
 
 }

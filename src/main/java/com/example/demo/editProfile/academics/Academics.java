@@ -1,47 +1,97 @@
 package com.example.demo.editProfile.academics;
-import com.example.demo.editProfile.profileData.ProfileData;
+
+import com.example.demo.editProfile.EditProfile;
+import com.example.demo.editProfile.student.Student;
 
 import java.time.LocalDate;
+import java.util.List;
 
-public  class Academics extends ProfileData {
+public  class Academics extends Student{
     private String schoolName;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private List<String> awards;
 
-    public Academics(String gradeLevel,
-                     String state,
-                     String city,
+    public Academics() {
+    }
+
+    public Academics(Long id,
+                     String firstName,
+                     String lastName,
+                     String email,
+                     LocalDate dob,
+                     Integer age,
                      String schoolName,
                      LocalDate startDate,
                      LocalDate endDate,
-                     double gpa) {
-        super(gradeLevel, state, city, startDate, endDate, gpa);
+                     List<String> awards) {
+        super(id, firstName, lastName, email, dob, age);
+        this.schoolName = schoolName;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.awards = awards;
+    }
+
+    public String getSchoolName() {
+        return schoolName;
+    }
+
+    public void setSchoolName(String schoolName) {
         this.schoolName = schoolName;
     }
 
-    public Academics() {
-
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    @Override
-    public String toString() {
-        return "Academics{" +
-                "schoolName='" + schoolName + '\'' +
-                '}';
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+
+    public List<String> getAwards() {
+        return awards;
+    }
+
+    public void setAwards(List<String> awards) {
+        this.awards = awards;
+    }
+
+    /***
+     * A summary of the particular
+     * activity/education
+     * @return summary
+     */
     @Override
     public String summary() {
-        return "Here's my academic history";
+        return null;
     }
 
+    /***
+     * Can add clubs the student was
+     * involved in.
+     * @return a list of clubs
+     */
     @Override
-    public String clubs() {
-        return "Sharing information " +
-                "about the clubs I was part of " +
-                "in school";
+    public List<String> clubs() {
+        return null;
     }
 
+    /***
+     * The student can add any links
+     * relevant to their education and
+     * experience
+     * @return a list of external links
+     */
     @Override
-    public String externalLinks() {
-        return "www.example.com";
+    public List<String> externalLinks() {
+        return null;
     }
 }

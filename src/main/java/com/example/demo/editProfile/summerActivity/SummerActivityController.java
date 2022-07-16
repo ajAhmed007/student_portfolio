@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "api/v1/student/summerActivity")
 public class SummerActivityController {
@@ -16,7 +18,7 @@ public class SummerActivityController {
     }
 
     @GetMapping
-    public String summerActivity(){
+    public List<SummerActivity> summerActivity(){
         return SummerActivityService.getSummerActivity();
     }
 }

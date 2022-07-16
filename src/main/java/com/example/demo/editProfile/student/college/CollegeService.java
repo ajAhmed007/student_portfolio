@@ -12,18 +12,12 @@ public class CollegeService {
     @GetMapping
     public static List<College> getCollegeStudent(){
         return List.of(new College(
-                "senior",
-                "Washington",
-                "Bellevue",
-                "Bellevue College",
-                LocalDate.of(2018, Month.SEPTEMBER, 20),
-                LocalDate.of(2022, Month.JUNE, 27),
-                3.8,
-                215564L,
-                "William Gass",
-                "william.gass@gmail.com",
-                LocalDate.of(1998, Month.JUNE, 20),
-                24,
+                1634L,
+                "John",
+                "Jones",
+                "john.jones@gmail.com",
+                LocalDate.of(2000, Month.JULY, 1),
+                22,
                 "Computer Science",
                 "Applied Computing"
         ));

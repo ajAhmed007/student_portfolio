@@ -1,5 +1,6 @@
 package com.example.demo.editProfile.volunteering;
 
+import com.example.demo.editProfile.suppLearning.SuppLearning;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -14,14 +15,15 @@ public class VolunteeringService {
     @GetMapping
     public static List<Volunteering> getAllVolunteering(){
         return List.of(new Volunteering(
-                "Senior",
-                "Washington",
-                "Seattle",
-                LocalDate.of(2021, Month.JUNE, 25),
-                LocalDate.of(2022, Month.SEPTEMBER, 20),
-                "Seattle Public Library",
-                400,
-                "Volunteered at the library organizing books"
+                1234L,
+                "Ahmed",
+                "Abdullahi",
+                "ahmed.abdullahi@gmail.com",
+                LocalDate.of(2000, Month.JULY, 1),
+                22,
+                "Summer School",
+                "Roosevelt High School",
+                80
         ));
     }
 

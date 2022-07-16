@@ -1,25 +1,27 @@
 package com.example.demo.editProfile.suppLearning;
 
-import com.example.demo.editProfile.profileData.ProfileData;
+
+import com.example.demo.editProfile.EditProfile;
+import com.example.demo.editProfile.student.Student;
 
 import java.time.LocalDate;
 
-public class SuppLearning extends ProfileData {
+public class SuppLearning extends Student{
     private String programName;
     private String organization;
     private String awards_achievements;
 
 
-    public SuppLearning(String gradeLevel,
-                        String state,
-                        String city,
-                        LocalDate startDate,
-                        LocalDate endDate,
-                        double gpa,
+    public SuppLearning(Long id,
+                        String firstName,
+                        String lastName,
+                        String email,
+                        LocalDate dob,
+                        Integer age,
                         String programName,
                         String organization,
                         String awards_achievements) {
-        super(gradeLevel, state, city, startDate, endDate, gpa);
+        super(id, firstName, lastName, email, dob, age);
         this.programName = programName;
         this.organization = organization;
         this.awards_achievements = awards_achievements;
@@ -60,9 +62,4 @@ public class SuppLearning extends ProfileData {
                 '}';
     }
 
-    @Override
-    public String summary() {
-        return "Sharing learning experience " +
-                "i've had outside of school";
-    }
 }

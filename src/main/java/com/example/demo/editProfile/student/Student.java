@@ -1,12 +1,14 @@
 package com.example.demo.editProfile.student;
-
-import com.example.demo.editProfile.academics.Academics;
+import com.example.demo.editProfile.EditProfile;
+import com.example.demo.editProfile.address.Address;
 
 import java.time.LocalDate;
+import java.util.List;
 
-public class Student extends Academics{
+public class Student implements EditProfile{
     private Long id;
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
     private LocalDate dob;
     private Integer age;
@@ -14,21 +16,15 @@ public class Student extends Academics{
     public Student() {
     }
 
-    public Student(String gradeLevel,
-                   String state,
-                   String city,
-                   String schoolName,
-                   LocalDate startDate,
-                   LocalDate endDate,
-                   double gpa,
-                   Long id,
-                   String name,
+    public Student(Long id,
+                   String firstName,
+                   String lastName,
                    String email,
                    LocalDate dob,
-                   Integer age) {
-        super(gradeLevel, state, city, schoolName, startDate, endDate, gpa);
+                   Integer age){
         this.id = id;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.dob = dob;
         this.age = age;
@@ -42,12 +38,20 @@ public class Student extends Academics{
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -78,10 +82,42 @@ public class Student extends Academics{
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", dob=" + dob +
                 ", age=" + age +
                 '}';
+    }
+
+    /***
+     * A summary of the particular
+     * activity/education
+     * @return summary
+     */
+    @Override
+    public String summary() {
+        return null;
+    }
+
+    /***
+     * Can add clubs the student was
+     * involved in.
+     * @return a list of clubs
+     */
+    @Override
+    public List<String> clubs() {
+        return null;
+    }
+
+    /***
+     * The student can add any links
+     * relevant to their education and
+     * experience
+     * @return a list of external links
+     */
+    @Override
+    public List<String> externalLinks() {
+        return null;
     }
 }

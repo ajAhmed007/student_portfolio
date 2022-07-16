@@ -8,26 +8,22 @@ public class College extends Student {
     private String major;
     private String minor;
 
-    public College(String gradeLevel,
-                   String state,
-                   String city,
-                   String schoolName,
-                   LocalDate startDate,
-                   LocalDate endDate,
-                   double gpa,
-                   Long id,
-                   String name,
+    public College() {
+    }
+
+    public College(Long id,
+                   String firstName,
+                   String lastName,
                    String email,
                    LocalDate dob,
                    Integer age,
                    String major,
                    String minor) {
-        super(gradeLevel, state, city, schoolName,
-                startDate, endDate, gpa, id, name,
-                email, dob, age);
+        super(id, firstName, lastName, email, dob, age);
         this.major = major;
         this.minor = minor;
     }
+
 
     public String getMajor() {
         return major;

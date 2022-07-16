@@ -15,8 +15,18 @@ public class HighSchoolController {
     public HighSchoolController(HighSchoolService highSchoolService) {
         this.highSchoolService = highSchoolService;
     }
+
     @GetMapping
     public List<HighSchool> getHighSchoolStudents(){
         return highSchoolService.getHighSchoolStudents();
     }
+
+
+    @GetMapping("/honors_clubs")
+    public List<HighSchool> getHonors_Clubs(){
+        return highSchoolService.getHonors_Clubs();
+    }
+
+
+
 }

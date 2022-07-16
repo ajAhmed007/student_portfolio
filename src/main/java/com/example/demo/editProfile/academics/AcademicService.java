@@ -13,16 +13,22 @@ public class AcademicService{
     public static List<Academics> getAcademics(){
         return List.of(
                 new Academics(
-                "Senior",
-                "Washington",
-                "Seattle",
-                "University of Washington",
-                LocalDate.of(2020, Month.SEPTEMBER, 20),
-                LocalDate.of(2022, Month.JUNE, 20),
-                4.0)
+                        88763L,
+                        "Yahya",
+                        "Ibrahim",
+                        "yahya.ibrahim@uw.edu",
+                        LocalDate.of(2001,Month.JULY, 1),
+                        21,
+                        "University of Washington",
+                        LocalDate.of(2021, Month.SEPTEMBER, 28),
+                        LocalDate.of(2025, Month.JUNE, 20),
+                        List.of("Deans List Fall 2021")
+                )
         );
     }
 
-    public void addNewStudent(Academics academics) {
+
+    public void addAcademics(Academics academics) {
+        System.out.println(academics);
     }
 }

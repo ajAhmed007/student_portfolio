@@ -11,20 +11,29 @@ public class HighSchoolService {
 
     public static  List<HighSchool> getHighSchoolStudents(){
         return List.of(new HighSchool(
-                "Freshmen",
-                "Washington",
-                "Seattle",
-                "Adams High Schools",
-                LocalDate.of(2022, Month.SEPTEMBER, 30),
-                LocalDate.of(2026, Month.JUNE, 20),
-                3.5,
-                4561223L,
-                "Marriam Mohamed",
-                "marriam.mohamed@gmail.com",
-                LocalDate.of(2007, Month.SEPTEMBER, 21),
-                15,
-                "Chemistry",
-                "Science Club"
+                12345L,
+                "William",
+                "Michael",
+                "william.michael@gmail.com",
+                LocalDate.of(2002, Month.JUNE, 1),
+                20
         ));
     }
+
+
+
+    public static List<HighSchool> getHonors_Clubs(){
+        return List.of(new HighSchool(
+                12345L,
+                "jama",
+                "Ahmed",
+                "jama.ahmed@gmail.com",
+                LocalDate.of(2005, Month.JUNE, 1),
+                17,
+                List.of("Honors Physics", "Honors Calculus"),
+                List.of("Engineering Club"),
+                List.of("working on Discord Clone")
+        ));
+    }
+
 }

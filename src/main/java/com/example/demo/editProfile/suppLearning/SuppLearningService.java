@@ -12,16 +12,15 @@ public class SuppLearningService {
     @GetMapping
     static List<SuppLearning> getSuppLearning(){
         return List.of(new SuppLearning(
-                "Senior",
-                "Washington",
-                "Seattle",
-                LocalDate.of(2020,  Month.SEPTEMBER, 30),
-                LocalDate.of(2022,  Month.JUNE, 30),
-                4.0,
-                "Bootcamp",
-                "CodePath",
-                "certificate of completion"
-
+                1234L,
+                "Ahmed",
+                "Abdullahi",
+                "ahmed.abdullahi@gmail.com",
+                LocalDate.of(2000, Month.JULY, 1),
+                22,
+                "Summer School",
+                "Roosevelt High School",
+                "Certificate of Completion"
         ));
     }
 }
